@@ -1,0 +1,38 @@
+#include <limits.h>
+#include <stdio.h>
+#include <float.h>
+int main()
+{
+    char test_raw_char = 1;
+    int test_raw_int = 1;
+    signed int test_signed_int = 1;
+    unsigned int test_unsigned_int = 1;
+    short int test_short_int = 1;
+    long int test_long_int = 1;
+    short signed int test_short_signed_int = 1;
+    short unsigned int test_short_unsigned_int = 1;
+    long signed int test_long_signed_int = 1;
+    long unsigned int test_long_unsigned_int = 1;
+    float test_float = 1;
+    double test_double = 1;
+    long double test_long_double = 1;
+    signed char test_signed_char = 1;
+    unsigned char test_unsigned_char = 1;
+    printf("Długość dla poszczególnych typów:\n");
+    printf("char: %dB.\nPrzyjmuje wartości od %d do %d. \n", sizeof(test_raw_char), CHAR_MIN , CHAR_MAX);
+    printf("int: %dB.\nPrzyjmuje wartości od %d do %d. \n", sizeof(test_raw_int), INT_MIN, INT_MAX);
+    printf("signed int: %dB. \n", sizeof(test_signed_int));
+    printf("unsigned int: %dB.\nPrzyjmuje wartości do %d . \n", sizeof(test_unsigned_int), UINT_MAX);
+    printf("short int: %dB.\nPrzyjmuje wartości od %d do %d. \n", sizeof(test_short_int), SHRT_MIN, SHRT_MAX);
+    printf("long int: %dB.\nPrzyjmuje wartości od %ld do %ld. \n", sizeof(test_long_int), LONG_MIN, LONG_MAX);
+    printf("short signed int: %dB. \n", sizeof(test_short_signed_int));
+    printf("short unsigned int: %dB.\nPrzyjmuje wartości do %d. \n", sizeof(test_short_unsigned_int), USHRT_MAX);
+    printf("long signed int: %dB. \n", sizeof(test_long_signed_int));
+    printf("long unsigned int: %dB.\nPrzyjmuje wartości  do %ld. \n", sizeof(test_long_unsigned_int), ULONG_MAX);
+    printf("float: %dB.\nPrzyjmuje wartości od %.10e do %.10e . \n", sizeof(test_float), FLT_MIN, FLT_MAX);
+    printf("double: %dB. \n", sizeof(test_double));
+    printf("long double: %dB. \n", sizeof(test_long_double));
+    printf("signed char: %dB.\nPrzyjmuje wartości od %d do %d. \n", sizeof(test_signed_char), SCHAR_MIN, SCHAR_MAX);
+    printf("unsigned char: %dB.\nPrzyjmuje wartości do %d. \n", sizeof(test_unsigned_char), UCHAR_MAX);
+    return 0;
+} 
