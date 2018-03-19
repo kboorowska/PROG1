@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define farenheit 32
+int main()
+{
+    int const kelvin= 273;
+    double temperatura, celc, kel, ran;
+    scanf("%lf",&temperatura);
+    //temperatura= 103;
+    celc= 5.0/9.0*(temperatura-farenheit);
+    kel=celc+kelvin;
+    ran=kel*9.0/5.0;
+    printf("%.2f farenheita to %.2f celcjusza(a to %.2f kelwina(a to %.2f Rankine))", temperatura, celc, kel, ran);
+    return 0;
+}
