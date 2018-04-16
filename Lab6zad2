@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define far 32
+int
+main ()
+{
+  char taklbnie = 'y';
+  do
+    {
+
+      const float kelv = 273.15;
+      printf ("Ile jest stopni farenheita?\n");
+      double te, celc, kel, ran;
+      scanf ("%lf", &te);
+      celc = 5.0 / 9.0 * (te - far);
+      kel = celc + kelv;
+      ran = kel * 9.0 / 5.0;
+      printf ("%.2f celcjusza, czyli %.2f kelwina, a to %.2f Rankine\n", celc, kel, ran);
+      printf ("czy chcesz kontynuowac?y/n\n");
+      getchar ();
+      scanf (" %c", &taklbnie);
+    }
+  while (taklbnie == 'y');
+
+  return 0;
+}
