@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <limits.h>
+
+int min(int tab[], int size)
+{
+    int temp = INT_MAX, i;
+    for (i = 0 ; i < size ; i++)
+        if (tab[i]<temp)
+            temp = tab[i];
+    return temp;
+}
+
+int max(int tab[], int size)
+{
+    int temp = INT_MIN, i;
+    for (i = 0 ; i < size ; i++)
+        if (tab[i]>temp)
+            temp = tab[i];
+    return temp;
+}
+
+int main()
+{
+    int tab[10];
+    int i;
+    int size = sizeof(tab)/sizeof(int);
+    for (i = 0 ; i < size ; i++)
+        scanf("%d", &tab[i]);
+    printf ("Min: %d\n", min(tab,size));
+    printf ("Max: %d\n", max(tab,size));
+    return 0;
+}
